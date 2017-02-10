@@ -1,0 +1,105 @@
+@import 'rules';
+
+.project-zone {
+  text-align: left;
+  padding: 5px 65px 5px 130px;
+
+  a { text-decoration: none; }
+
+  .project-container {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    background: lightgrey;
+    border-bottom: 5px solid white;
+    color: white;
+    cursor: pointer;
+
+    .title {
+      position: relative;
+      top: 20px;
+      z-index: 1;
+      font-family: $font-head;
+      font-weight: 700;
+      font-size: 2em;
+      margin: 0;
+    }
+
+    .description {
+      position: relative;
+      z-index: 1;
+      font-size: 1.3em;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .hilight {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      width: 0px;
+      height: 100%;
+      background: red;
+      transition: width 0.7s;
+    }
+
+    &:hover {
+
+      .hilight {
+        width: 100%;
+        transition: width 0.7s;
+      }
+    }
+  }
+}
+
+.hex-zone {
+  position: absolute;
+  left: -65px;
+  bottom: 37px;
+}
+
+.hexagon {
+  width: 130px;
+  height: 76px;
+  background: grey;
+  position: relative;
+
+  img {
+    height: 85px;
+    position: relative;
+    bottom: 5px;
+  }
+}
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -37px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-bottom: 37px solid grey;
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -37px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-top: 37px solid grey;
+}
+
+#doop {
+  .hilight { background: purple; }
+  .hexagon { background: magenta; }
+  .hexagon:before { border-bottom: 37px solid magenta; }
+  .hexagon:after { border-top: 37px solid magenta; }
+
+}

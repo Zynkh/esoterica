@@ -1,0 +1,156 @@
+@import 'rules';
+
+.about-section {
+  width: 100%;
+  margin-bottom: 20px;
+
+  &.hello {
+    height: 300px;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+
+  .about-blurb {
+    text-align: left;
+    font-weight: 100;
+  }
+
+  .contact {
+    width: 100%;
+
+    img { 
+      height: 300px;
+      width: 485px;
+      background: grey;
+    }
+
+    a {
+      position: relative;
+      margin: 0px 15px 20px 15px;
+
+      p {
+        position: absolute;
+        bottom: -55px;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 700;;
+      }
+    }
+  }
+
+  &.single {
+    width: calc(100% - 120px);
+    padding: 10px 60px;
+  }
+
+  &.double {
+
+    .left {
+      height: 100%;
+      float: left;
+      width: calc(50% - 60px);
+      margin-left: 60px;
+      text-align: center;
+    }
+
+    .right {
+      float: right;
+      height: 100%;
+      width: calc(50% - 60px);
+      margin-right: 60px;
+    }
+  }
+}
+
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #454545;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 52px;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: 0;
+}
+
+.btn-outline {
+    border: solid 2px #454545;
+    font-size: 27px;
+    color: #454545;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+    border: solid 2px #F3E6FF;
+    color: #9933FF;
+    background: #F3E6FF;
+}
+
+.inkblot {
+  background: lightgrey;
+  color: white;
+
+  small {
+    font-weight: 300;
+  }
+
+  img {
+    height: 300px;
+  }
+}
+
+.skillz {
+    .hard {
+      font-weight: 100;
+    }
+
+  .skills {
+
+    ul {
+      list-style-type: none;
+      width: 20%;
+      text-align: left;
+      display: inline-block;
+      margin-top: 0;
+      vertical-align: top;
+
+      li {
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.timeline {
+  background: lightgrey;
+
+  ul {
+    list-style-type: none;
+    width: 20%;
+    text-align: left;
+    display: inline-block;
+    margin-top: 0;
+    vertical-align: top;
+
+    li:first-child {
+      font-weight: 700;
+    }
+
+    li {
+      font-weight: 100;
+    }
+  }
+}
